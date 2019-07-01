@@ -9,6 +9,6 @@ Xin chào :)), chào mừng bạn đến với kho lữu trữ code nằm trong 
 
 
 
-                                                                                Cảm ơn bạn đã dành thời gian để đọc những dòng này
-                                                                                                         Ký tên
-                                                                                                 Chủ đồ án-Người tin tưởng bạn
+                                                        Cảm ơn bạn đã dành thời gian để đọc những dòng này
+                                                                         Ký tên
+                                                              Chủ đồ án-Người tin tưởng bạn
