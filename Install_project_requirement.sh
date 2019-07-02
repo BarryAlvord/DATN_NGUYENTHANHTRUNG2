@@ -38,7 +38,7 @@ clear
 center_text 'This script will install whatever you need for the project' "="
 printf '\n'
 center_text "Your system need to up-to-date" " "
-echo "   :please be patient there is 4 step left:"
+echo "   :please be patient there is 5 step left:"
 
 
 cd ~
@@ -53,7 +53,7 @@ center_text "Now,We will install all the requirement packages" " "
 apt-get update  > /dev/null 2>&1
 
 echo '- Install python depend packages'
-echo "   :please be patient there is 3 step left:"
+echo "   :please be patient there is 4 step left:"
 apt-get install python -y > /dev/null 2>&1
 apt-get install python-dev -y > /dev/null 2>&1
 apt-get install python-pip -y > /dev/null 2>&1
@@ -67,7 +67,7 @@ center_text "Done" " "
 
 echo "- Install Oled library"
 cd ~
-echo "   :please be patient there is 2 step left:"
+echo "   :please be patient there is 3 step left:"
 sudo apt-get install i2c-tools -y > /dev/null 2>&1
 sudo apt-get install python-smbus > /dev/null 2>&1
 sudo apt-get install python-pillow > /dev/null 2>&1
@@ -78,7 +78,7 @@ center_text "Done" " "
 
 echo "- Install Peak Detection library"
 cd ~
-echo "   :please be patient there is 1 step left:"
+echo "   :please be patient there is 2 step left:"
 git clone https://bitbucket.org/lucashnegri/peakutils/src/master/  library/peakutils
 cd /library/peakutils
 python setup.py install > /dev/null 2>&1
@@ -86,10 +86,17 @@ center_text "Done" " "
 
 echo '- Configure microphone'
 cd ~
-echo "   :please be patient this is the final step"
+echo "   :please be patient there is 1 step left:"
 cd ~/DATN_NGUYENTHANHTRUNG2
 cd Setup_audio
 sudo cp -r .asoundrc ~
 center_text "Done" " "
+
+echo '- Install Bme280 and Uart library'
 cd ~
+echo "   :please be patient this is the final step:"
+pip install pyserial > /dev/null 2>&1
+pip install smbus > /dev/null 2>&1
+center_text "Done" " "
+
 echo 'Thanks you for your patience to wait for this script to finish'
