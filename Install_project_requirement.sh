@@ -1,4 +1,5 @@
 #!/bin/bash
+
 center_text()
 {
     local terminal_width=$(tput cols)
