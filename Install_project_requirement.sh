@@ -74,6 +74,7 @@ sudo apt-get install python-pillow > /dev/null 2>&1
 git clone https://github.com/nukem/ssd1306 library/peakutils
 cd library/peakutils
 sudo python setup.py install > /dev/null 2>&1
+center_text "Done" " "
 
 echo "- Install Peak Detection library"
 cd ~
