@@ -1,5 +1,7 @@
 # DATN_NGUYENTHANHTRUNG2
 Xin chào :)), chào mừng bạn đến với kho lữu trữ code nằm trong khuân khổ đồ án tốt nghiệp ... dưới đây tôi sẽ cung cấp cho bạn 1 số điều nhỏ về dự án này:
+  
+  
   1.Dù cho bạn là nam hay là nữ hay bạn là ai đi chăng nữa thì tôi cảm thấy hết sức may mắn khi bạn là người đc chọn để tiếp tục sửa sai và cải tiến những gì mà tôi đã làm.Cảm ơn bạn rất nhiều vì đã chọn nó
 
   2.Tôi mong rằng bạn hãy bớt chút thời gian của mình để có thể đọc kỹ Quyển Đồ án, User Manual và cả phải code shell(.sh) tôi đã  trên này, vì tôi nghĩ rằng nó sẽ giúp bạn tiết kiệm đc rất nhiều thời gian nghiên cứu nó.Ở thời điểm của tôi,tôi còn quá ít thời gian để có thể hoàn thiện.Nên tôi hi vọng bạn sẽ làm đc hơn thế. TÔI TIN VÀO BẠN :>
