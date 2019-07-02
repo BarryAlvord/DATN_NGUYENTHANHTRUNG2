@@ -1,5 +1,5 @@
 # DATN_NGUYENTHANHTRUNG2
-Xin chào :)), chào mừng bạn đến với kho lữu trữ code nằm trong khuân khổ đồ án tốt nghiệp ... dưới đây tôi sẽ cung cấp cho bạn 1 số điều nhỏ về dự án này:
+Xin chào :)), chào mừng bạn đến với kho lữu trữ code nằm trong khuân khổ đồ án tốt nghiệp "Giám sát các thông số trong nhà với máy tính nhúng, ứng dụng nhận dạng hoạt động các thiết bị trong nhà",dưới đây tôi sẽ cung cấp cho bạn 1 số điều nhỏ về dự án này:
   
   
   1.Dù cho bạn là nam hay là nữ hay bạn là ai đi chăng nữa thì tôi cảm thấy hết sức may mắn khi bạn là người đc chọn để tiếp tục sửa sai và cải tiến những gì mà tôi đã làm.Cảm ơn bạn rất nhiều vì đã chọn nó
