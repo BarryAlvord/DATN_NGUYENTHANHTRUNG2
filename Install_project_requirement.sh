@@ -116,5 +116,5 @@ pip install smbus > /dev/null 2>&1
 center_text "Done" " "
 
 echo 'Thanks you for your patience to wait for this script to finish'
-countdown 10 "before reboot"
+countdown 10 "before reboot!
 sudo reboot
