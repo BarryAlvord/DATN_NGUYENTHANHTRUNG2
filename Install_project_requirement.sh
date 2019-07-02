@@ -1,15 +1,14 @@
 #!/bin/bash
 center_text()
 {
-    local terminal_width=$(tput cols)    # query the Terminfo database: number of columns
-    local text="${1:?}"                  # text to center
-    local glyph="${2:-=}"                # glyph to compose the border
-    local padding="${3:-2}"              # spacing around the text
+    local terminal_width=$(tput cols)
+    local text="${1:?}"
+    local glyph="${2:-=}"
+    local padding="${3:-2}"
 
-    local border=                        # shape of the border
+    local border=
     local text_width=${#text}
 
-    # the border is as wide as the screen
     for ((i=0; i<terminal_width; i++))
     do
         border+="${glyph}"
@@ -17,26 +16,37 @@ center_text()
 
     printf "$border"
 
-    # width of the text area (text and spacing)
     local area_width=$(( text_width + (padding * 2) ))
 
-    # horizontal position of the cursor: column numbering starts at 0
     local hpc=$(( (terminal_width - area_width) / 2 ))
 
-    tput hpa $hpc                       # move the cursor to the beginning of the area
+    tput hpa $hpc
 
-    tput ech $area_width                # erase the border inside the area without moving the cursor
-    tput cuf $padding                   # move the cursor after the spacing (create padding)
+    tput ech $area_width
+    tput cuf $padding
 
-    printf "$text"                      # print the text inside the area
+    printf "$text"
 
-    tput cud1                           # move the cursor on the next line
+    tput cud1
+}
+
+countdown() {
+  secs=$1
+  shift
+  msg=$@
+  while [ $secs -gt 0 ]
+  do
+    printf "\r\033[KWaiting %.d seconds $msg" $((secs--))
+    sleep 1
+  done
+  echo
 }
 
 clear
 
 center_text 'This script will install whatever you need for the project' "="
 printf '\n'
+sleep 5
 center_text "Your system need to up-to-date" " "
 echo "   :please be patient there is 5 step left:"
 
@@ -50,6 +60,7 @@ center_text "Done" " "
 
 printf '\n'
 center_text "Now,We will install all the requirement packages" " "
+sleep 2
 apt-get update  > /dev/null 2>&1
 
 echo '- Install python depend packages'
@@ -64,6 +75,7 @@ pip install pyaudio > /dev/null 2>&1
 apt-get install libjpeg-dev zlib1g-dev > /dev/null 2>&1
 apt-get install git > /dev/null 2>&1
 center_text "Done" " "
+sleep 2
 
 echo "- Install Oled library"
 cd ~
@@ -75,6 +87,7 @@ git clone https://github.com/nukem/ssd1306 library/peakutils
 cd library/peakutils
 sudo python setup.py install > /dev/null 2>&1
 center_text "Done" " "
+sleep 2
 
 echo "- Install Peak Detection library"
 cd ~
@@ -83,6 +96,7 @@ git clone https://bitbucket.org/lucashnegri/peakutils/src/master/  library/peaku
 cd /library/peakutils
 python setup.py install > /dev/null 2>&1
 center_text "Done" " "
+sleep 2
 
 echo '- Configure microphone'
 cd ~
@@ -91,6 +105,7 @@ cd ~/DATN_NGUYENTHANHTRUNG2
 cd Setup_audio
 sudo cp -r .asoundrc ~
 center_text "Done" " "
+sleep 2
 
 echo '- Install Bme280 and Uart library'
 cd ~
@@ -100,3 +115,5 @@ pip install smbus > /dev/null 2>&1
 center_text "Done" " "
 
 echo 'Thanks you for your patience to wait for this script to finish'
+countdown 10 "before reboot"
+sudo reboot
