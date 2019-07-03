@@ -72,6 +72,7 @@ apt-get install python-pip -y > /dev/null 2>&1
 apt-get install python-setuptools > /dev/null 2>&1
 apt-get install scipy -y > /dev/null 2>&1
 apt-get install numpy -y > /dev/null 2>&1
+sudo apt-get install portaudio19-dev  > /dev/null 2>&1
 pip install pyaudio > /dev/null 2>&1
 apt-get install libjpeg-dev zlib1g-dev > /dev/null 2>&1
 apt-get install git > /dev/null 2>&1
