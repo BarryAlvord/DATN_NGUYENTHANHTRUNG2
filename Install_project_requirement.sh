@@ -85,7 +85,7 @@ echo "   :please be patient there is 3 step left:"
 sudo apt-get install i2c-tools -y > /dev/null 2>&1
 sudo apt-get install python-smbus > /dev/null 2>&1
 sudo apt-get install python-pillow > /dev/null 2>&1
-pip install smbus2 > /dev/null 2>&1
+sudo pip install smbus2 > /dev/null 2>&1
 git clone https://github.com/nukem/ssd1306 library/peakutils
 cd library/peakutils
 sudo python setup.py install > /dev/null 2>&1
